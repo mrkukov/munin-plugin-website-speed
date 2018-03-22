@@ -7,15 +7,16 @@ Notice that the name of the site cannot contain dots. So change the name "github
 1. `git clone https://github.com/mrkukov/munin-plugin-website-speed`
 2. `cd munin-plugin-website-speed`
 3. `chmod +x website_speed.sh`
-4. add a new site to output_config function
-5. add the site also to the output_values function
-6. try to run it: `./website_speed.sh`
+4. `nano website_speed.sh`
+- add a new site to the output_config function
+- add the site also to the output_values function
+5. try to run it: `./website_speed.sh`
 
 ## Setup plugin into munin
 
 1. `ln -s /etc/munin/plugins/website_speed /your/own/path/to/website_speed.sh`
 2. `nano /etc/munin/plugin-conf.d/munin-node`
-Add to the end:
+- Add to the end:
 ```
 [website_speed*]
 user root
